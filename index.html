@@ -1,16 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <title>Something</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polar</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
-<body>
-    <div>
-        <img src="images/firstSlider.png" alt="">
-    </div>
-</body>
+<body class="">
+    <header class="header" id="header">
+        <nav class="navigation">
+            <div class="nav-center container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-top">
+                        <div class="logo">
+                            <img src="images/logo.png" alt="logo">
+                        </div>
+                        <div class="close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link scroll-link">Home</a>
+                        </li>
+                        <li class="nav-item" data-dropdown>
+                            <a href="#products" class="nav-link scroll-link" dropdown-button>Products</a>
+                            <ul id="drop-down">
+                                <li><a href="#products" class="nav-link scroll-link">Desktops</a></li>
+                                <li><a href="#products" class="nav-link scroll-link">Laptops</a></li>
+                                <li><a href="#products" class="nav-link scroll-link">Monitors</a></li>
+                                <li><a href="#products" class="nav-link scroll-link">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#sale" class="nav-link scroll-link">Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#new" class="nav-link scroll-link">New</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#aboutus" class="nav-link scroll-link">About Us</a>
+                        </li>
+                    </ul>
+                </div>
 
-</html>
+                <div class="nav-icons">
+                    <span><i class="fa-solid fa-cart-arrow-down"></i></span>
+                    <span><i class="fa-solid fa-user"></i></span>
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+
+
+                <div class="collapse">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/index.js"></script>
+</body>
