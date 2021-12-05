@@ -1,3 +1,4 @@
+//nav open and close
 const openButton = document.querySelector(".collapse");
 const closeButton = document.querySelector(".close");
 const nav = document.querySelector(".nav-menu");
@@ -21,7 +22,7 @@ closeButton.addEventListener("click", () => {
 document.addEventListener('click', e => {
     const isDropDownButton = e.target.matches("[dropdown-button]");
     if (!isDropDownButton && e.target.closest('[data-dropdown]') != null) return
-    let currentDropDown
+    let currentDropDown;
     if (isDropDownButton) {
         currentDropDown = e.target.closest('[data-dropdown]');
         currentDropDown.classList.toggle('active');
