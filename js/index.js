@@ -32,3 +32,14 @@ document.addEventListener('click', e => {
         dropdown.classList.remove('active')
     })
 })
+//fix nav bar to the top
+const navBar = document.querySelector('.navigation');
+const navHeight = navBar.getBoundingClientRect().height;
+window.addEventListener('scroll', () => {
+    const scrollHeight = window.pageYOffset;
+    if (scrollHeight > navHeight) {
+        navBar.classList.add('fix-nav')
+    } else {
+        navBar.classList.remove('fix-nav')
+    }
+});
