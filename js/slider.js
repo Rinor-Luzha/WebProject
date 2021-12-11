@@ -3,10 +3,10 @@ if (slider) {
     new Glide(slider, {
         type: "carousel",
         startAt: 0,
-        autoPlay: true,
+        autoplay: 5000,
         hoverpause: true,
         perView: 1,
-        animationDuration: 300,
+        animationDuration: 500,
         animationTimingFunc: "linear",
     }).mount()
 }
