@@ -9,6 +9,7 @@
   }
   
   .footer-container {
+    padding-left:3rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     color: var(--white);

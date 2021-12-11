@@ -2,6 +2,11 @@
 #header-logo:hover{
     cursor:pointer;
 }
+.container{
+    max-width:150rem;
+    margin:0 auto;
+    padding:0 1rem;
+}
 .navigation{
     padding:1.6rem 0;
 }
@@ -152,7 +157,7 @@
      }
     .collapse{
         display:block;
-        font-size:3rem;
+        font-size:4rem;
         cursor:pointer;
     }
     .close{
@@ -168,7 +173,6 @@
     .nav-icons span{
         display:none;
         border:none;
-        font-size:1.6rem;
     }
     body.show::before {
         content: "";
@@ -179,6 +183,21 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
         z-index: 999;
-      }
+    }
     
+}
+@media only screen and (max-width:586px){
+    .navigation{
+        height:60px;
+        padding-top:12px;
+    }
+    .navigation img{
+        width:120px;
+    }
+    .navigation .collapse{
+        font-size:3rem;
+    }  
+    .navigation.show{
+        height:69px;
+    }
 }
