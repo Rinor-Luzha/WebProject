@@ -37,7 +37,7 @@ const navBar = document.querySelector('.navigation');
 const navHeight = navBar.getBoundingClientRect().height;
 window.addEventListener('scroll', () => {
     const scrollHeight = window.pageYOffset;
-    if (scrollHeight > navHeight / 3) {
+    if (scrollHeight > navHeight / 4) {
         navBar.classList.add('fix-nav')
     } else {
         navBar.classList.remove('fix-nav')
