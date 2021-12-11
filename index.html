@@ -1,200 +1,173 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Polar</title>
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/headersStyle.css" />
-  </head>
 
-  <body class="">
-    <header class="header" id="header">
-      <nav class="navigation">
-        <div class="nav-center container">
-          <div class="logo">
-            <img src="images/logo.png" alt="logo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polar</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/headersStyle.css" />
+</head>
+
+<body class="">
+  <header class="header" id="header">
+    <nav class="navigation">
+      <div class="nav-center container">
+        <div class="logo">
+          <img src="images/logo.png" alt="logo" id="header-logo" />
+        </div>
+        <div class="nav-menu">
+          <div class="nav-top">
+            <div class="logo">
+              <img src="images/logo.png" alt="logo" />
+            </div>
+            <div class="close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
           </div>
-          <div class="nav-menu">
-            <div class="nav-top">
-              <div class="logo">
-                <img src="images/logo.png" alt="logo" />
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link scroll-link">Home</a>
+            </li>
+            <li class="nav-item" data-dropdown>
+              <a href="#products" class="nav-link scroll-link" dropdown-button>Products</a>
+              <ul>
+                <li>
+                  <a href="#products" class="nav-link scroll-link">Desktops</a>
+                </li>
+                <li>
+                  <a href="#products" class="nav-link scroll-link">Laptops</a>
+                </li>
+                <li>
+                  <a href="#products" class="nav-link scroll-link">Monitors</a>
+                </li>
+                <li>
+                  <a href="#products" class="nav-link scroll-link">Accessories</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#sale" class="nav-link scroll-link">Sale</a>
+            </li>
+            <li class="nav-item">
+              <a href="#new" class="nav-link scroll-link">New</a>
+            </li>
+            <li class="nav-item">
+              <a href="#aboutus" class="nav-link scroll-link">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-icons">
+          <span><i class="fa-solid fa-cart-arrow-down"></i></span>
+          <span><i class="fa-solid fa-user"></i></span>
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+
+        <div class="collapse">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Slider -->
+    <section class="slider">
+      <div class="glide" id="slider">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides glide__slidercontent">
+            <li class="glide__slide">
+              <div class="slider-main">
+                <div class="slider-content">
+                  <div class="slider-buttons">
+                    <button>shop laptops</button>
+                    <button>shop desktops</button>
+                  </div>
+                </div>
+
+                <img src="images/slider/firstSlider.png" alt="laptop" />
               </div>
-              <div class="close">
-                <i class="fa-solid fa-xmark"></i>
+            </li>
+            <li class="glide__slide">
+              <div class="slider-main">
+                <div class="slider-content">
+                  <div class="slider-buttons">
+                    <button>shop laptops</button>
+                    <button>shop desktops</button>
+                  </div>
+                </div>
+
+                <img src="images/slider/secondSlider.png" alt="laptop" />
               </div>
-            </div>
-            <ul class="nav-list">
-              <li class="nav-item">
-                <a href="#home" class="nav-link scroll-link">Home</a>
-              </li>
-              <li class="nav-item" data-dropdown>
-                <a href="#products" class="nav-link scroll-link" dropdown-button
-                  >Products</a
-                >
-                <ul>
-                  <li>
-                    <a href="#products" class="nav-link scroll-link"
-                      >Desktops</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#products" class="nav-link scroll-link">Laptops</a>
-                  </li>
-                  <li>
-                    <a href="#products" class="nav-link scroll-link"
-                      >Monitors</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#products" class="nav-link scroll-link"
-                      >Accessories</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#sale" class="nav-link scroll-link">Sale</a>
-              </li>
-              <li class="nav-item">
-                <a href="#new" class="nav-link scroll-link">New</a>
-              </li>
-              <li class="nav-item">
-                <a href="#aboutus" class="nav-link scroll-link">About Us</a>
-              </li>
-            </ul>
-          </div>
+            </li>
+            <li class="glide__slide" sty>
+              <div class="slider-main">
+                <div class="slider-content">
+                  <div class="slider-buttons">
+                    <button>shop laptops</button>
+                    <button>shop desktops</button>
+                  </div>
+                </div>
 
-          <div class="nav-icons">
-            <span><i class="fa-solid fa-cart-arrow-down"></i></span>
-            <span><i class="fa-solid fa-user"></i></span>
-            <span><i class="fa-solid fa-magnifying-glass"></i></span>
-          </div>
+                <img src="images/slider/thirdSlider.png" alt="laptop" />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- arrows per slider -->
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
 
-          <div class="collapse">
-            <i class="fa-solid fa-bars"></i>
+    <section class="category products_category">
+      <h2 class="title">Our Products!</h2>
+      <div class="category-center container">
+        <div class="category-box">
+          <img src="./images/preview/desktop1.png" alt="" />
+          <div class="content">
+            <h2>Desktops</h2>
+            <span>155 Products</span>
+            <a href="#">shop now</a>
           </div>
         </div>
-      </nav>
-    </header>
-    <main>
-      <!-- Slider -->
-      <section class="slider">
-        <div class="glide" id="slider">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides glide__slidercontent">
-              <li class="glide__slide">
-                <div class="slider-main">
-                  <div class="slider-content">
-                    <div class="slider-buttons">
-                      <button>shop laptops</button>
-                      <button>shop desktops</button>
-                    </div>
-                  </div>
 
-                  <img src="images/slider/firstSlider.png" alt="laptop" />
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="slider-main">
-                  <div class="slider-content">
-                    <div class="slider-buttons">
-                      <button>shop laptops</button>
-                      <button>shop desktops</button>
-                    </div>
-                  </div>
-
-                  <img src="images/slider/secondSlider.png" alt="laptop" />
-                </div>
-              </li>
-              <li class="glide__slide" sty>
-                <div class="slider-main">
-                  <div class="slider-content">
-                    <div class="slider-buttons">
-                      <button>shop laptops</button>
-                      <button>shop desktops</button>
-                    </div>
-                  </div>
-
-                  <img src="images/slider/thirdSlider.png" alt="laptop" />
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- arrows per slider -->
-          <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-              <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
+        <div class="category-box">
+          <img src="./images/preview/laptops3.jpg" alt="" />
+          <div class="content">
+            <h2>Laptops</h2>
+            <span>155 Products</span>
+            <a href="#">shop now</a>
           </div>
         </div>
-      </section>
-
-      <section class="category products_category">
-        <h2 class="title">Our Products!</h2>
-        <div class="category-center container">
-          <div class="category-box">
-            <img src="./images/preview/desktop1.png" alt="" />
-            <div class="content">
-              <h2>Desktops</h2>
-              <span>155 Products</span>
-              <a href="#">shop now</a>
-            </div>
-          </div>
-
-          <!-- <div class="category-box">
-            <img src="./images/preview/accessories2.jpg" alt="" />
-            <div class="content">
-              <h2>Accessories</h2>
-              <span>155 Products</span>
-              <a href="#">shop now</a>
-            </div>
-          </div> -->
-
-          <div class="category-box">
-            <img src="./images/preview/laptops3.jpg" alt="" />
-            <div class="content">
-              <h2>Laptops</h2>
-              <span>155 Products</span>
-              <a href="#">shop now</a>
-            </div>
-          </div>
-          <div class="category-box">
-            <img src="./images/preview/monitor4.jpg" alt="" />
-            <div class="content">
-              <h2>Monitors</h2>
-              <span>155 Products</span>
-              <a href="#">shop now</a>
-            </div>
+        <div class="category-box">
+          <img src="./images/preview/monitor4.jpg" alt="" />
+          <div class="content">
+            <h2>Monitors</h2>
+            <span>155 Products</span>
+            <a href="#">shop now</a>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="js/product.js"></script>
-    <script src="js/slider.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/slider.js"></script>
+</body>
+
 </html>
