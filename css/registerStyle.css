@@ -1,0 +1,21 @@
+body{
+    background: #DFC1FF;
+    background: -webkit-radial-gradient(top right, #DFC1FF, #FF6D38);
+    background: -moz-radial-gradient(top right, #DFC1FF, #FF6D38);
+    background: radial-gradient(to bottom left, #DFC1FF, #FF6D38);}
+.form{
+    height:85vh;
+}
+.form .container{
+    height:75vh;
+}
+.user-icon{
+    top:8.5rem;
+}
+.login-details{
+    padding-top:2.5rem;
+    height:60rem;
+}
+.input-div .fa-exclamation{
+    padding-left:0.5rem;
+}
