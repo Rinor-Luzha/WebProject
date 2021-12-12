@@ -161,11 +161,6 @@ span.dot::before {
   text-decoration: underline ;
   cursor:default;
 }
-/* .rating {
-  color: var(--yellow);
-  font-size: 1.3rem;
-} */
-
 .product-price h4 {
   padding:1rem;
   font-weight: 700;
@@ -214,51 +209,6 @@ span.dot::before {
   background-color: var(--black);
   transform:scale(1.1);
 }
-
-/* .product ul a::before {
-  content: "";
-  position: absolute;
-  top: -0.6rem;
-  left: -0.6rem;
-  height: 0;
-  width: 0;
-  border-top: 3px solid var(--orange);
-  border-left: 3px solid var(--orange);
-  transition: 0.5s;
-  opacity: 0;
-  z-index: 1;
-} */
-
-/* .product ul a::after {
-  content: "";
-  position: absolute;
-  bottom: -0.6rem;
-  right: -0.6rem;
-  width: 0;
-  height: 0;
-  border-bottom: 3px solid var(--orange);
-  border-right: 3px solid var(--orange);
-  z-index: 1;
-  opacity: 0;
-  transition: 0.5s;
-}
-
- .product ul a:hover::before {
-  width: 126%;
-  height: 126%;
-  border-top: 3px solid var(--orange);
-  border-bottom: 3px solid var(--orange);
-  opacity: 1;
-} 
-
-.product ul a:hover::after {
-  width: 126%;
-  height: 126%;
-  border-bottom: 3px solid var(--orange);
-  border-right: 3px solid var(--orange);
-  opacity: 1;
-} 
-*/
 @media only screen and (max-width: 1200px) {
   .product-center {
     grid-template-columns: repeat(3, 1fr);
@@ -282,5 +232,19 @@ span.dot::before {
 @media only screen and (max-width: 567px) {
   .product-header {
     height: 15rem;
+  }
+  .product-center {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+@media only screen and (max-width: 590px) {
+  .product-center .product-header {
+    height: 25rem;
+  }
+  .product{
+      border-color:transparent;
+      width:70%;
+      margin:0 auto;
   }
 }
