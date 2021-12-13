@@ -1,16 +1,20 @@
 body{
+    height:100%;
     background: #DFC1FF;
     background: -webkit-radial-gradient(top right, #DFC1FF, #FF6D38);
     background: -moz-radial-gradient(top right, #DFC1FF, #FF6D38);
-    background: radial-gradient(to bottom left, #DFC1FF, #FF6D38);}
+    background: radial-gradient(to bottom left, #DFC1FF, #FF6D38);
+    background-repeat: no-repeat;
+}
 .form{
-    height:85vh;
+    height:60rem;
+    margin-bottom:2rem;
 }
 .form .container{
-    height:75vh;
+    height:60rem;
 }
 .user-icon{
-    top:8.5rem;
+    top:5rem;
 }
 .login-details{
     padding-top:2.5rem;
