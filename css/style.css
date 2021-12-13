@@ -78,7 +78,7 @@ img{
     border:1px solid black;
     font-family:inherit;
     font-weight: 500%;
-    background-color:transparent;
+    background-color:var(--black);
     color:white;
     font-size:1.4rem;
     text-transform: uppercase;
