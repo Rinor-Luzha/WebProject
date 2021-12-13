@@ -1,14 +1,16 @@
 body{
-    height:100%;
     background: #DFC1FF;
     background: -webkit-radial-gradient(top right, #DFC1FF, #FF6D38);
     background: -moz-radial-gradient(top right, #DFC1FF, #FF6D38);
     background: radial-gradient(to bottom left, #DFC1FF, #FF6D38);
+    height: 100%;
+    margin: 0;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom:2rem;
 }
 .form{
     height:60rem;
-    margin-bottom:2rem;
 }
 .form .container{
     height:60rem;
