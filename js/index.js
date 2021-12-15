@@ -70,3 +70,13 @@ links.map((link) => {
         document.body.classList.remove("show");
     });
 });
+
+//Making the search bar stick out when clicked
+const search = document.querySelector('#search-bar');
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.search') != null) {
+        search.classList.add('clicked');
+    } else {
+        search.classList.remove('clicked');
+    }
+})

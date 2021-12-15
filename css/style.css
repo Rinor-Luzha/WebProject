@@ -42,7 +42,7 @@ img{
     max-height: 100%;
 }
 .container{
-    max-width:150rem;
+    /* max-width:150rem; */
     margin:0 auto;
     padding:0 1rem;
 }
@@ -58,6 +58,7 @@ img{
     position:relative;
     display:block;
     height:100%;
+    width:100%;
     z-index: -1;
 }
 .slider-content{
