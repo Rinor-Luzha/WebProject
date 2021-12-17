@@ -25,3 +25,43 @@ body{
 .input-div .fa-exclamation{
     padding-left:0.5rem;
 }
+.initials{
+    width:12rem;
+    display:flex;
+    flex-direction:column;
+    text-align: left;
+}
+.input-wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gender-wrapper{
+    color:var(--grey2);
+    display:flex;
+    justify-content: space-between;
+}
+.gender{
+    width:12rem;
+    margin-top:1rem;
+    padding-left:0.5rem;
+    font-size:1.2rem;
+    display:flex;
+    transition:all 100ms ease-in;
+}
+.gender:hover{
+    color:var(--white);
+}
+.gender .input{
+    width:1.2rem;
+    height:100%;
+    margin-left:2rem;
+}
+@media only screen and (max-width: 586px) {
+    .user-icon{
+        top:6rem;
+    }
+  }
+
+

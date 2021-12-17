@@ -28,17 +28,37 @@
                 <div class="login-details">
                     <h2>Register</h2>
                     <div class="input-div">
-                        <label for="name">
-                            <p class="input-text">Name</p>
-                        </label>
-                        <input required name="name" placeholder="Enter Name" type="text" class="input" id="name">
+                        <div class="input-wrapper">
+                            <div class="initials">
+                                <label for="name">
+                                    <span class="input-text">Name</span>
+                                </label>
+                                <input required name="name" placeholder="Enter Name" type="text" class="input"
+                                    id="name">
+                            </div>
+                            <div class="initials">
+                                <label for="surname">
+                                    <span class="input-text">Surname</span>
+                                </label>
+                                <input required name="surname" placeholder="Enter Surname" type="text" class="input"
+                                    id="surname">
+                            </div>
+                        </div>
                     </div>
                     <div class="input-div">
-                        <label for="surname">
-                            <p class="input-text">Surname</p>
+                        <label>
+                            <p class="input-text">Gender</p>
                         </label>
-                        <input required name="surname" placeholder="Enter Surname" type="text" class="input"
-                            id="surname">
+                        <div class="gender-wrapper">
+                            <div class="gender">
+                                <label for="male">Male</label>
+                                <input name="gender" type="radio" class="input" value="male" id="male" checked>
+                            </div>
+                            <div class="gender">
+                                <label for="female">Female</label>
+                                <input name="gender" type="radio" class="input" vlaue="female" id="female">
+                            </div>
+                        </div>
                     </div>
                     <div class="input-div">
                         <label for="birthdate">
