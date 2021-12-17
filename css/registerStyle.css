@@ -48,10 +48,14 @@ body{
     padding-left:0.5rem;
     font-size:1.2rem;
     display:flex;
+    
+}
+.gender label{
     transition:all 100ms ease-in;
 }
-.gender:hover{
+.gender label:hover{
     color:var(--white);
+    cursor:pointer;
 }
 .gender .input{
     width:1.2rem;
