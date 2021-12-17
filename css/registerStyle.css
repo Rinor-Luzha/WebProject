@@ -53,6 +53,9 @@ body{
 .gender label{
     transition:all 100ms ease-in;
 }
+.gender input:hover{
+    cursor:pointer;
+}
 .gender label:hover{
     color:var(--white);
     cursor:pointer;
