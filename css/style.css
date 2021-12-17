@@ -492,17 +492,17 @@ img{
   .trending-products{
     padding-bottom:2rem;
     background-color:rgba(245, 219, 255, 0.4); /*fallback bg color*/
-    background: -webkit-radial-gradient(top right, #fdf8ff, #ffeadd);
-    background: -moz-radial-gradient(top right, #fdf8ff, #ffeadd);
-    background: radial-gradient(to bottom left, #fdf8ff, #ffeadd);
+    background: -webkit-radial-gradient(top right, #fcfff2, #ffeadd);
+    background: -moz-radial-gradient(top right, #fcfff2, #ffeadd);
+    background: radial-gradient(to bottom left, #fcfff2, #ffeadd);
    
   }
   .new-products{
     padding-bottom:2rem;
     background-color:#ffeedb;/*fallback bg color*/
-    background: -webkit-radial-gradient(top right, #ffdec8, #e4fdff);
-    background: -moz-radial-gradient(top right, #ffdec8, #e4fdff);
-    background: radial-gradient(to bottom left, #ffdec8, #e4fdff);
+    background: -webkit-radial-gradient(top right, #ffdec8, #fcf6ff);
+    background: -moz-radial-gradient(top right, #ffdec8, #fcf6ff);
+    background: radial-gradient(to bottom left, #ffdec8, #fcf6ff);
    
   }
   @media only screen and (max-width: 768px) {

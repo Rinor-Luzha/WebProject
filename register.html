@@ -33,15 +33,15 @@
                                 <label for="name">
                                     <span class="input-text">Name</span>
                                 </label>
-                                <input required name="name" placeholder="Enter Name" type="text" class="input"
-                                    id="name">
+                                <input required maxlength="20" name="name" placeholder="Enter Name" type="text"
+                                    class="input" id="name">
                             </div>
                             <div class="initials">
                                 <label for="surname">
                                     <span class="input-text">Surname</span>
                                 </label>
-                                <input required name="surname" placeholder="Enter Surname" type="text" class="input"
-                                    id="surname">
+                                <input required maxlength="20" name="surname" placeholder="Enter Surname" type="text"
+                                    class="input" id="surname">
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,8 @@
                         <label for="email">
                             <p class="input-text">Email</p>
                         </label>
-                        <input required name="email" placeholder="Enter Email" type="email" class="input" id="email">
+                        <input required maxlength="40" name="email" placeholder="Enter Email" type="email" class="input"
+                            id="email">
                         <i class="far fa-exclamation"></i>
                         <small id="emailError"></small>
                     </div>
@@ -79,8 +80,8 @@
                         <label for="password">
                             <p class="input-text">Password</p>
                         </label>
-                        <input required name="password" placeholder="Enter Password" type="password" class="input"
-                            id="password">
+                        <input required maxlength="25" name="password" placeholder="Enter Password" type="password"
+                            class="input" id="password">
                         <i class="far fa-exclamation"></i>
                         <small id="passwordError"></small>
                     </div>
