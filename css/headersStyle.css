@@ -112,6 +112,9 @@ a{
 .nav-icons span:hover .fa-solid:not(:last-child){
     color:var(--white);
 }
+.collapse{
+    display:none;
+}
 /* search bar */
 .search{
     width:0px;
@@ -144,15 +147,20 @@ a{
     .search input.clicked {
         width:10rem;
     }
+    .search:hover input{
+        width:10rem;
+    }
 }
 @media only screen and (max-width:848px){
     .search input.clicked {
         width:5rem;
     }
+    .search:hover input{
+        width:5rem;
+    }
 }
-.collapse{
-    display:none;
-}
+/* end of search bar css*/
+
 @media only screen and (max-width:768px){
     .nav-link{
         font-size:1.4rem;

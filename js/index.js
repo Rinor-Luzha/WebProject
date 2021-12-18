@@ -19,28 +19,25 @@ closeButton.addEventListener("click", () => {
 
 
 // dropdown
-document.addEventListener('click', e => {
-    const isDropDownButton = e.target.matches("[dropdown-button]");
-    if (!isDropDownButton && e.target.closest('[data-dropdown]') != null) return
-    let currentDropDown;
-    if (isDropDownButton) {
-        currentDropDown = e.target.closest('[data-dropdown]');
-        currentDropDown.classList.toggle('active');
+document.addEventListener('click', (e) => {
+    const dropdown = document.querySelector('#dropdown');
+    if (e.target.hash === '#products') {
+        dropdown.classList.toggle('active');
+    } else if (e.target.closest('#dropdown')) {
+        //do nothing -> inside of dropdown list
+    } else {
+        dropdown.classList.remove('active');
     }
-    document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
-        if (dropdown === currentDropDown) return
-        dropdown.classList.remove('active')
-    })
+
 })
 //fix nav bar to the top
-const navBar = document.querySelector('.navigation');
-const navHeight = navBar.getBoundingClientRect().height;
+const navHeight = navigation.getBoundingClientRect().height;
 window.addEventListener('scroll', () => {
     const scrollHeight = window.pageYOffset;
     if (scrollHeight > navHeight / 4) {
-        navBar.classList.add('fix-nav')
+        navigation.classList.add('fix-nav')
     } else {
-        navBar.classList.remove('fix-nav')
+        navigation.classList.remove('fix-nav')
     }
 });
 
@@ -52,13 +49,12 @@ links.map((link) => {
 
         const id = e.target.getAttribute("href").slice(1);
         const element = document.getElementById(id);
-        const fixNav = navBar.classList.contains("fix-nav");
+        const fixNav = navigation.classList.contains("fix-nav");
         let position = element.offsetTop - navHeight;
 
         if (!fixNav) {
             position = position - navHeight;
         }
-
         window.scrollTo({
             top: position,
             left: 0,
@@ -74,7 +70,7 @@ links.map((link) => {
 //Making the search bar stick out when clicked
 const search = document.querySelector('#search-bar');
 document.addEventListener('click', (e) => {
-    if (e.target.closest('.search') != null) {
+    if (e.target.closest('.search')) {
         search.classList.add('clicked');
     } else {
         search.classList.remove('clicked');
