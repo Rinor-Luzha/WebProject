@@ -1,6 +1,7 @@
 .footer {
     background-color: var(--black);
     padding: 6rem 1rem;
+    margin-top: 15px;
     line-height: 3rem;
   }
   

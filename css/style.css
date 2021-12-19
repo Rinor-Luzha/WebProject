@@ -349,6 +349,7 @@ img{
     position: relative;
     padding: 0 1rem;
     transition: all 300ms ease-in-out;
+    cursor: pointer;
   }
   .product:hover{
     box-shadow: 0 5px 10px var(--grey2);
@@ -398,7 +399,7 @@ img{
     left: 50%;
     width: 13rem;
     height: 5rem;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(63, 59, 59, 0.4);
     opacity: 0;
     visibility: hidden;
     transform: translate(-50%, -50%) scale(0.7);
