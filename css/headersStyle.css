@@ -153,10 +153,10 @@ a{
 }
 @media only screen and (max-width:848px){
     .search input.clicked {
-        width:5rem;
+        width:3rem;
     }
     .search:hover input{
-        width:5rem;
+        width:3rem;
     }
 }
 /* end of search bar css*/
