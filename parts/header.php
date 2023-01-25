@@ -45,9 +45,7 @@
 
             <div class="nav-icons">
                 <span><i class="fa-solid fa-cart-arrow-down"></i></span>
-                <span><a href="login.html"><i class="fa-solid fa-user"></i></a></span>
-                <span class="search"><input id="search-bar" type="text" placeholder="Type to Search">
-                    <i class="fa-solid fa-magnifying-glass"></i></span>
+                <span><a href="index.php?page=login"><i class="fa-solid fa-user"></i></a></span>
             </div>
 
             <div class="collapse">

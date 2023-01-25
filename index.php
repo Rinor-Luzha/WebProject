@@ -17,24 +17,24 @@
   }
   switch ($url) {
     case 'home':
-      require_once 'home.php';
+      require_once 'views/home.php';
       break;
     case 'desktops':
-      require_once 'desktops.php';
+      require_once 'views/desktops.php';
       break;
     case 'laptops':
-      require_once 'laptops.php';
+      require_once 'views/laptops.php';
       break;
     case 'monitors':
-      require_once 'monitors.php';
+      require_once 'views/monitors.php';
       break;
     case 'login':
-      require_once 'login.php';
+      require_once 'views/login.php';
       break;
     case 'register':
-      require_once 'register.php';
+      require_once 'views/register.php';
       break;
     default:
-      require_once 'home.php';
+      require_once 'views/home.php';
   }
   ?>
