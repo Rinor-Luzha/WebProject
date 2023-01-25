@@ -127,7 +127,6 @@ $prodController = new ProductController;
           <div class="content">
             <h2>Laptops</h2>
             <span><?php echo $laptopsCount ?> Products</span>
-            <!-- TODO: Get count from db -->
             <a href="index.php?page=laptops">shop now</a>
           </div>
         </div>

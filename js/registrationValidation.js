@@ -15,43 +15,78 @@ function validatePassword(pw) {
 const form = document.querySelector('#submit');
 form.addEventListener('submit', (e) => {
     const inputDiv = document.querySelectorAll('.input-div');
+    const name = document.querySelector("#name").value;
+    const surname = document.querySelector("#surname").value;
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const birthdate = document.querySelector("#birthdate").value;
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
+    const initialsError = document.getElementById('initialsError');
+    const genderError = document.getElementById('genderError');
+    const birthdateError = document.getElementById('birthdateError');
     const passwordError = document.getElementById('passwordError');
     const emailError = document.getElementById('emailError');
-    let emailErr = [];
-    let passwordErr = [];
-    let emailValidation = true;
-    let passwordValidation = true;
+    console.log(birthdate);
+
+    let initialsValidated = true;
+    let passwordValidated = true;
+    let validation = true;
+    if (name.length < 2) {
+        initialsError.innerText = "Name should be at least two characters.";
+        validation = false;
+        inputDiv[0].classList.add('error');
+        initialsValidated = false;
+    } else if (initialsValidated) {
+        inputDiv[0].classList.remove('error');
+    }
+    if (surname.length < 2) {
+        initialsError.innerText = initialsError.innerText + "\nSurname should be at least two characters.";
+        validation = false;
+        initialsValidated = false;
+        inputDiv[0].classList.add('error');
+    } else if (initialsValidated) {
+        inputDiv[0].classList.remove('error');
+    }
+    if (gender === null || (gender.value !== 'M' && gender.value !== 'F')) {
+        genderError.innerText = "Gender was not set correctly.";
+        validation = false;
+        inputDiv[1].classList.add('error');
+    } else {
+        inputDiv[1].classList.remove('error');
+    }
+    if (birthdate == undefined || birthdate == null || birthdate == '') {
+        birthdateError.innerText = "Birthdate is required.";
+        validation = false;
+        inputDiv[2].classList.add('error');
+    } else {
+        inputDiv[2].classList.remove('error');
+    }
     if (validateEmail(email) === false) {
-        emailErr.push("The email you have entered is not valid!");
-        emailValidation = false;
+        emailError.innerText = "The email you have entered is not valid!";
+        validation = false;
+        inputDiv[3].classList.add('error');
+    } else {
+        inputDiv[3].classList.remove('error');
     }
     if (password.length < 8) {
-        passwordErr.push("Password should be a minimum of 8 characters.");
-        passwordValidation = false;
+        passwordError.innerText = "Password should be a minimum of 8 characters.";
+        validation = false;
+        passwordValidated = false;
+        inputDiv[4].classList.add('error');
+
+    } else if (passwordValidated) {
+        inputDiv[4].classList.remove('error');
     }
     if (validatePassword(password) === false) {
-        passwordErr.push("Password include a special character and at least one capital letter.");
-        passwordValidation = false;
-
-    }
-    if (emailValidation && passwordValidation) {
-    } else if (!emailValidation && passwordValidation) {
-        e.preventDefault();
-        emailError.innerText = emailErr.join('\n ');
-        inputDiv[3].classList.add('error');
+        passwordError.innerText = passwordError.innerText + "\nPassword should include a special character and at least one capital letter.";
+        validation = false;
+        passwordValidated = false;
+        inputDiv[4].classList.add('error');
+    } else if (passwordValidated) {
         inputDiv[4].classList.remove('error');
-    } else if (emailValidation && !passwordValidation) {
+    }
+
+    if (validation == false) {
         e.preventDefault();
-        passwordError.innerText = passwordErr.join('\n ');
-        inputDiv[4].classList.add('error');
-        inputDiv[3].classList.remove('error');
-    } else {
-        e.preventDefault();
-        emailError.innerText = emailErr.join('\n ');
-        passwordError.innerText = passwordErr.join('\n ');
-        inputDiv[4].classList.add('error');
-        inputDiv[3].classList.add('error');
     }
 });

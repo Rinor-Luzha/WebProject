@@ -50,7 +50,7 @@ class ProductController extends DbConnect
     {
         $query = $this->db->query('SELECT COUNT(id) as total from products 
                                    WHERE type="laptop"');
-        return $query->fetchAll()[0];
+        return $query->fetch();
     }
 
     public function readDesktops()
@@ -64,7 +64,7 @@ class ProductController extends DbConnect
     {
         $query = $this->db->query('SELECT COUNT(id) as total from products 
                                    WHERE type="desktop"');
-        return $query->fetchAll()[0];
+        return $query->fetch();
     }
 
 
@@ -79,7 +79,7 @@ class ProductController extends DbConnect
     {
         $query = $this->db->query('SELECT COUNT(id) as total from products 
                                    WHERE type="monitor"');
-        return $query->fetchAll()[0];
+        return $query->fetch();
     }
 
     public function readBanners()
