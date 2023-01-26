@@ -18,7 +18,7 @@ closeButton.addEventListener("click", () => {
 });
 
 
-// dropdown
+// dropdowns
 document.addEventListener('click', (e) => {
     const dropdown = document.querySelector('#dropdown');
     if (e.target.hash === '#products') {
@@ -28,8 +28,18 @@ document.addEventListener('click', (e) => {
     } else {
         dropdown.classList.remove('active');
     }
-
 })
+document.addEventListener('click', (e) => {
+    const dropdown = document.querySelector('#dashboard');
+    if (e.target.hash === '#options') {
+        dropdown.classList.toggle('active');
+    } else if (e.target.closest('#dashboard')) {
+        //do nothing -> inside of dropdown list
+    } else {
+        dropdown.classList.remove('active');
+    }
+})
+
 //fix nav bar to the top
 const navHeight = navigation.getBoundingClientRect().height;
 window.addEventListener('scroll', () => {
@@ -48,6 +58,7 @@ links.map((link) => {
         e.preventDefault();
 
         const id = e.target.getAttribute("href").slice(1);
+        console.log(id);
         const element = document.getElementById(id);
         const fixNav = navigation.classList.contains("fix-nav");
         let position = element.offsetTop - navHeight;
@@ -66,13 +77,3 @@ links.map((link) => {
         document.body.classList.remove("show");
     });
 });
-
-//Making the search bar stick out when clicked
-const search = document.querySelector('#search-bar');
-document.addEventListener('click', (e) => {
-    if (e.target.closest('.search')) {
-        search.classList.add('clicked');
-    } else {
-        search.classList.remove('clicked');
-    }
-})

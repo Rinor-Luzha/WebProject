@@ -1,3 +1,7 @@
+<?php
+require_once "controllers/AuthController.php";
+$authController = new AuthController;
+?>
 <header class="header" id="header">
     <nav class="navigation">
         <div class="nav-center container">
@@ -14,6 +18,22 @@
                     </div>
                 </div>
                 <ul class="nav-list">
+                    <?php
+                    if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'admin') {
+                        echo ' 
+                        <li class="nav-item" id="dashboard">
+                        <a href="#options" class="nav-link">Dashboard</a>
+                        <ul>
+                            <li>
+                            <a href="index.php?page=products" class="nav-link">Products</a>
+                            </li>
+                            <li>
+                            <a href="index.php?page=users" class="nav-link">Users</a>
+                            </li>
+                        </ul>
+                        </li>';
+                    }
+                    ?>
                     <li class="nav-item">
                         <a href="index.php?page=home" class="nav-link">Home</a>
                     </li>
@@ -37,15 +57,29 @@
                     <li class="nav-item">
                         <a href="index.php?page=home" class="nav-link">New</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="index.php?page=login" class="nav-link">My Account</a>
+                    <li class="nav-item mobile">
+                        <a href="index.php?page=cart" class="nav-link">Shopping cart</a>
                     </li>
+                    <li class="nav-item mobile">
+                        <a href="index.php?page=account" class="nav-link">My Account</a>
+                    </li>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        echo '
+                    <li class="nav-item">
+                        <a href="?logout=1" class="nav-link">Logout</a>
+                    </li>';
+                    }
+                    if (isset($_GET['logout'])) {
+                        $authController->logoutUser();
+                    }
+                    ?>
                 </ul>
             </div>
 
             <div class="nav-icons">
                 <span><i class="fa-solid fa-cart-arrow-down"></i></span>
-                <span><a href="index.php?page=login"><i class="fa-solid fa-user"></i></a></span>
+                <a href="index.php?page=login"><span><i class="fa-solid fa-user"></i></span></a>
             </div>
 
             <div class="collapse">

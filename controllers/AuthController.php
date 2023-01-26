@@ -23,13 +23,9 @@ class AuthController extends DbConnect
             echo '<script>alert("Password is required")</script>';
             return;
         }
-        var_dump($password);
         $password = md5($password);
         $query = $this->db->query("SELECT * FROM users WHERE email='$email' AND password='$password'");
         $userExists = $query->fetch();
-        var_dump($userExists);
-        var_dump($password);
-        var_dump($email);
 
         if (isset($userExists['email'])) { // user found
             // check if user is admin 

@@ -1,0 +1,125 @@
+body {
+    padding-bottom: 2rem;
+}
+
+.product-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    text-align: center;
+}
+
+
+.image input {
+    width: 80%;
+}
+
+.image img {
+    width: 90%;
+    height: 20rem;
+}
+
+
+.form {
+    border: 1px #f1f1f1 solid;
+    border-radius: 20px;
+    width: 50rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-in-out;
+}
+
+.form:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+
+}
+
+.input-div {
+    padding: 1rem 0;
+}
+
+.input-div textarea,
+.input-div input,
+.input-div select {
+    border: 2px #f1f1f1 solid;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    width: 90%;
+    resize: none;
+    outline: none;
+    font-size: 1.6rem;
+}
+
+.categories {
+    outline: none;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.category input {
+    width: fit-content;
+}
+
+.category {
+    font-size: 1.4rem;
+}
+
+.submit-button button {
+    width: 50%;
+    padding: 0.7rem 0;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 30rem;
+    background-color: var(--orange);
+    transition: all 200ms ease-in-out;
+}
+
+.last-editor {
+    text-align: left;
+    color: #959595;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    padding: 1rem 2rem;
+}
+
+.submit-button button:hover {
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+.add-button {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 150px;
+    padding: 0.7rem 1rem;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 15px 5px;
+    background-color: rgb(56, 204, 101);
+    transition: all 200ms ease-in-out;
+}
+
+.add-button:hover {
+    background-color: rgb(46, 138, 73);
+    cursor: pointer;
+}
+
+.add-button span {
+    padding: 0 10px;
+}
+
+
+@media only screen and (max-width: 586px) {
+    .image img {
+        height: 13rem;
+    }
+}

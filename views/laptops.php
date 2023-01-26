@@ -35,12 +35,23 @@
                     <a href="#">
                       <i class="fas fa-cart-plus"></i>
                     </a>
-                  </li>
-                </ul>
-              </div>';
+                  </li>';
+          if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'admin') {
+            echo '<li>
+                             <a href="index.php?page=editProduct&id=' . $value['id'] . '">
+                               <i class="fas fa-edit"></i>
+                             </a>
+                           </li>
+                           </ul>
+                        </div>
+                      </li>';
+          } else {
+            echo ' </ul>
+                         </div>
+                      </li>';
+          }
         }
         ?>
-
       </div>
     </section>
 

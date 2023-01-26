@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <?php
   session_start();
-
   if (isset($_GET['page'])) {
     $url = $_GET['page'];
   } else {
@@ -36,6 +35,19 @@
     case 'register':
       require_once 'views/register.php';
       break;
+    case 'addProduct':
+      require_once 'views/addProduct.php';
+      break;
+    case 'editProduct':
+      require_once 'views/editProduct.php';
+      break;
+    case 'deleteProduct':
+      require_once 'views/deleteProduct.php';
+      break;
+    case 'products':
+      require_once 'views/products.php';
+      break;
+
     default:
       require_once 'views/home.php';
   }
