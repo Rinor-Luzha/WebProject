@@ -35,6 +35,12 @@
     case 'register':
       require_once 'views/register.php';
       break;
+    case 'aboutUs':
+      require_once 'views/aboutUs.php';
+      break;
+    case 'account':
+      require_once 'views/account.php';
+      break;
     case 'addProduct':
       require_once 'views/addProduct.php';
       break;
@@ -42,12 +48,23 @@
       require_once 'views/editProduct.php';
       break;
     case 'deleteProduct':
-      require_once 'views/deleteProduct.php';
+      require_once 'helpers/deleteProduct.php';
       break;
     case 'products':
       require_once 'views/products.php';
       break;
-
+    case 'users':
+      require_once 'views/users.php';
+      break;
+    case 'cart':
+      require_once 'views/shoppingCart.php';
+      break;
+    case 'addCartProduct':
+      require_once 'helpers/addCartProduct.php';
+      break;
+    case 'deleteCartProduct':
+      require_once 'helpers/deleteCartProduct.php';
+      break;
     default:
       require_once 'views/home.php';
   }

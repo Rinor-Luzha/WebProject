@@ -68,14 +68,22 @@ $authController = new AuthController;
             <li class="nav-item">
               <a href="#new" class="nav-link scroll-link">New</a>
             </li>
-            <li class="nav-item mobile">
-              <a href="index.php?page=cart" class="nav-link">Shopping cart</a>
-            </li>
-            <li class="nav-item mobile">
-              <a href="index.php?page=account" class="nav-link">My Account</a>
-            </li>
-
             <?php
+            if (isset($_SESSION['username'])) {
+              echo ' <li class="nav-item mobile">
+                                    <a href="index.php?page=cart" class="nav-link">Shopping cart</a>
+                               </li>';
+              echo ' <li class="nav-item mobile">
+                                   <a href="index.php?page=account" class="nav-link">My Account</a>
+                               </li>';
+            } else {
+              echo ' <li class="nav-item mobile">
+                                    <a href="index.php?page=login" class="nav-link">Shopping cart</a>
+                               </li>';
+              echo ' <li class="nav-item mobile">
+                                   <a href="index.php?page=login" class="nav-link">My Account</a>
+                               </li>';
+            }
             if (isset($_SESSION['username'])) {
               echo '
                     <li class="nav-item">
@@ -90,8 +98,15 @@ $authController = new AuthController;
         </div>
 
         <div class="nav-icons">
-          <span><i class="fa-solid fa-cart-arrow-down"></i></span>
-          <a href="index.php?page=login"><span><i class="fa-solid fa-user"></i></span></a>
+          <?php
+          if (isset($_SESSION['userid'])) {
+            echo ' <a href="index.php?page=cart"><span><i class="fa-solid fa-cart-arrow-down"></i></span></a>';
+            echo ' <a href="index.php?page=account"><span><i class="fa-solid fa-user"></i></span></a>';
+          } else {
+            echo ' <a href="index.php?page=login"><span><i class="fa-solid fa-cart-arrow-down"></i></span></a>';
+            echo ' <a href="index.php?page=login"><span><i class="fa-solid fa-user"></i></span></a>';
+          }
+          ?>
         </div>
 
         <div class="collapse">
@@ -160,7 +175,6 @@ $authController = new AuthController;
           <div class="content">
             <h2>Laptops</h2>
             <span><?php echo $laptopsCount ?> Products</span>
-            <!-- TODO: Get count from db -->
             <a href="index.php?page=laptops">shop now</a>
           </div>
         </div>
@@ -193,12 +207,12 @@ $authController = new AuthController;
                          <div class="product-footer">
                            <div class="description"><span>' . strstr($value['description'], ' ', true) . ' </span>' . substr($value['description'], strpos($value['description'], ' ') + 1) . '</div>
                            <div class="product-price">
-                             <h4>' . $value['price'] . '</h4>
+                             <h4>$' . $value['price'] . '</h4>
                            </div>
                          </div>
                          <ul>
                            <li>
-                             <a href="#">
+                             <a href="index.php?page=addCartProduct&id=' . $value['productId'] . '">
                                <i class="fas fa-cart-plus"></i>
                              </a>
                            </li>';
@@ -251,12 +265,12 @@ $authController = new AuthController;
                          <div class="product-footer">
                            <div class="description"><span>' . strstr($value['description'], ' ', true) . ' </span>' . substr($value['description'], strpos($value['description'], ' ') + 1) . '</div>
                            <div class="product-price">
-                             <h4>' . $value['price'] . '</h4>
+                             <h4>$' . $value['price'] . '</h4>
                            </div>
                          </div>
                          <ul>
                            <li>
-                             <a href="#">
+                             <a href="index.php?page=addCartProduct&id=' . $value['productId'] . '">
                                <i class="fas fa-cart-plus"></i>
                              </a>
                            </li>';
@@ -300,7 +314,6 @@ $authController = new AuthController;
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.min.js"></script>
   <script src="./js/index.js"></script>
-  <script src="js/product.js"></script>
   <script src="js/slider.js"></script>
 </body>
 

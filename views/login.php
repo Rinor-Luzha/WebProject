@@ -14,6 +14,8 @@ $authController = new AuthController;
     <main class="form">
         <?php
         if (isset($_POST['submit'])) {
+            session_destroy();
+            session_start();
             $authController->loginUser($_POST);
         }
         ?>

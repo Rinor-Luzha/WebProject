@@ -11,9 +11,7 @@ if (!isset($_GET['id'])) {
 }
 $product = $prodController->getProductById($_GET['id']);
 
-if (isset($_GET['id'])) {
-    $prodController->deleteProduct($_GET['id']);
-    return header('location:index.php?page=products');
-} else {
-    return header('location:index.php?page=products');
+if (isset($product['id'])) {
+    $prodController->deleteProduct($product['id']);
 }
+return header('location:index.php?page=products');

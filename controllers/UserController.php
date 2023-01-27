@@ -15,7 +15,6 @@ class UserController extends DbConnect
     {
         // TODO: Admin only
         $query = $this->db->query('SELECT * from users');
-
         return $query->fetchAll();
     }
 

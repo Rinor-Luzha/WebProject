@@ -1,6 +1,7 @@
 <?php
 require_once "controllers/UserController.php";
 $userController = new UserController;
+
 ?>
 
 <title>Register</title>
@@ -15,6 +16,8 @@ $userController = new UserController;
     <main class="form">
         <?php
         if (isset($_POST['submit'])) {
+            session_destroy();
+            session_start();
             $userController->insertUser($_POST);
         }
         ?>

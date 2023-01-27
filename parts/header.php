@@ -57,13 +57,23 @@ $authController = new AuthController;
                     <li class="nav-item">
                         <a href="index.php?page=home" class="nav-link">New</a>
                     </li>
-                    <li class="nav-item mobile">
-                        <a href="index.php?page=cart" class="nav-link">Shopping cart</a>
-                    </li>
-                    <li class="nav-item mobile">
-                        <a href="index.php?page=account" class="nav-link">My Account</a>
-                    </li>
+
                     <?php
+                    if (isset($_SESSION['username'])) {
+                        echo ' <li class="nav-item mobile">
+                                    <a href="index.php?page=cart" class="nav-link">Shopping cart</a>
+                               </li>';
+                        echo ' <li class="nav-item mobile">
+                                   <a href="index.php?page=account" class="nav-link">My Account</a>
+                               </li>';
+                    } else {
+                        echo ' <li class="nav-item mobile">
+                                    <a href="index.php?page=login" class="nav-link">Shopping cart</a>
+                               </li>';
+                        echo ' <li class="nav-item mobile">
+                                   <a href="index.php?page=login" class="nav-link">My Account</a>
+                               </li>';
+                    }
                     if (isset($_SESSION['username'])) {
                         echo '
                     <li class="nav-item">
@@ -78,8 +88,15 @@ $authController = new AuthController;
             </div>
 
             <div class="nav-icons">
-                <span><i class="fa-solid fa-cart-arrow-down"></i></span>
-                <a href="index.php?page=login"><span><i class="fa-solid fa-user"></i></span></a>
+                <?php
+                if (isset($_SESSION['userid'])) {
+                    echo ' <a href="index.php?page=cart"><span><i class="fa-solid fa-cart-arrow-down"></i></span></a>';
+                    echo ' <a href="index.php?page=account"><span><i class="fa-solid fa-user"></i></span></a>';
+                } else {
+                    echo ' <a href="index.php?page=login"><span><i class="fa-solid fa-cart-arrow-down"></i></span></a>';
+                    echo ' <a href="index.php?page=login"><span><i class="fa-solid fa-user"></i></span></a>';
+                }
+                ?>
             </div>
 
             <div class="collapse">

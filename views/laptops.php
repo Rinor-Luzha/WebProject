@@ -27,12 +27,12 @@
                 <div class="product-footer">
                   <div class="description"><span>' . strstr($value['description'], ' ', true) . ' </span>' . substr($value['description'], strpos($value['description'], ' ') + 1) . '</div>
                   <div class="product-price">
-                    <h4>' . $value['price'] . '</h4>
+                    <h4>$' . $value['price'] . '</h4>
                   </div>
                 </div>
                 <ul>
                   <li>
-                    <a href="#">
+                    <a href="index.php?page=addCartProduct&id=' . $value['id'] . '">
                       <i class="fas fa-cart-plus"></i>
                     </a>
                   </li>';

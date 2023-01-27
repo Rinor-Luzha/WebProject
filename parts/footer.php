@@ -3,15 +3,21 @@
         <div class="footer-container">
             <div class="footer-center">
                 <h3>INFORMATION</h3>
-                <a href="#">About Us</a>
+                <a href="index.php?page=aboutUs">About Us</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms & Conditions</a>
             </div>
             <div class="footer-center">
                 <h3>MY ACCOUNT</h3>
-                <a href="index.php?page=login">My Account</a>
-                <a href="#">Order History</a>
-                <a href="#">Wish List</a>
+                <?php
+                if (isset($_SESSION['username'])) {
+                    echo '<a href="index.php?page=account">My Account</a>';
+                    echo '<a href="index.php?page=cart">Shopping Cart</a>';
+                } else {
+                    echo '<a href="index.php?page=login">My Account</a>';
+                    echo '<a href="index.php?page=login">Shopping Cart</a>';
+                }
+                ?>
             </div>
             <div class="footer-center">
                 <h3>CONTACT US</h3>

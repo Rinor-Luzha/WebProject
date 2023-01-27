@@ -1,42 +1,37 @@
-<title>Edit Product</title>
+<title>Shoppng Cart</title>
 <link rel="stylesheet" href="css/footerStyle.css" />
 <link rel="stylesheet" href="css/headersStyle.css" />
 <link rel="stylesheet" href="css/productStyle.css" />
-<link rel="stylesheet" href="css/productsAdminStyle.css" />
+<link rel="stylesheet" href="css/shoppingCartStyle.css" />
 
 </head>
 
 <body>
     <!-- Header -->
     <?php
-    require_once "controllers/ProductController.php";
-    $prodController = new ProductController;
-    if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] != 'admin') {
-        echo '<script>alert("You don\'t have enough privileges to enter this site.")</script>';
-        return header('location:index.php');
+    require_once "controllers/CartController.php";
+    $cartController = new CartController;
+    $products = $cartController->getCartProducts();
+    if (count($products) == 0) {
+        echo '<script>alert("No products in cart!")</script>';
+        return header("location:index.php");
     }
     require_once "parts/header.php";
-    $products = $prodController->readAllProducts();
 
     ?>
 
     <main>
-        <h2 class="title">Products</h2>
+        <h2 class="title">Your Shoppng Cart</h2>
         <section class="wrapper">
-            <a href="index.php?page=addProduct">
-                <div class="add-button">
-
-                    <i class="icon fa fa-plus"></i>
-                    <span>Add Product</span>
-                </div>
-            </a>
             <table class="styled-table">
                 <thead>
                     <tr class="head-row">
                         <th>Image</th>
                         <th>Description</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Add</th>
+                        <th>Remove</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,11 +45,17 @@
                                     <td class="product-description">
                                         <p class="product-description-field">' . $value['description'] . '</p>
                                     </td>
-                                    <td class="action-column">
-                                        <a class="edit-link" href="index.php?page=editProduct&id=' . $value['id'] . '">Edit</a>
+                                    <td class="price">
+                                        <p class="price-field">$' . $value['price'] . '</p>
+                                    </td>
+                                    <td class="total">
+                                        <p class="total-field">x' . $value['total'] . '</p>
                                     </td>
                                     <td class="action-column">
-                                        <a class="delete-link" href="index.php?page=deleteProduct&id=' . $value['id'] . '">Delete</a>
+                                        <a class="add-link" href="index.php?page=addCartProduct&id=' . $value['productId'] . '">Add</a>
+                                    </td>
+                                    <td class="action-column">
+                                        <a class="delete-link" href="index.php?page=deleteCartProduct&id=' . $value['id'] . '">Remove</a>
                                     </td>
                                 </tr>';
                     }

@@ -9,7 +9,6 @@
 <body>
     <!-- Header -->
     <?php
-    require_once "parts/header.php";
     require_once "controllers/ProductController.php";
     $prodController = new ProductController;
     if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] != 'admin') {
@@ -24,6 +23,7 @@
         }
         $prodController->insertProduct($_POST);
     }
+    require_once "parts/header.php";
 
     ?>
 
