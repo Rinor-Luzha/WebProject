@@ -62,12 +62,16 @@
                                     <p class="input-text">Gender</p>
                                 </label>
                                 <div class="gender-wrapper">
-                                        <input type="radio" name="gender"
-                                        <?php if (isset($user['gender']) && $user['gender']=="F") echo "checked";?>
-                                        value="F">Female
-                                        <input type="radio" name="gender"
-                                        <?php if (isset($user['gender']) && $user['gender']=="M") echo "checked";?>
-                                        value="M">Male
+                                        <div class="radio-option">
+                                            <input type="radio" name="gender"
+                                            <?php if (isset($user['gender']) && $user['gender']=="F") echo "checked";?>
+                                            value="F">Female
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" name="gender"
+                                            <?php if (isset($user['gender']) && $user['gender']=="M") echo "checked";?>
+                                            value="M">Male
+                                        </div>
                                 </div>
                             </div>
                             <div class="input-div">
@@ -75,12 +79,16 @@
                                     <p class="input-text">User Type</p>
                                 </label>
                                 <div class="gender-wrapper">
-                                        <input type="radio" name="usertype"
-                                        <?php if (isset($user['usertype']) && $user['usertype']=="admin") echo "checked";?>
-                                        value="admin">Admin
-                                        <input type="radio" name="usertype"
-                                        <?php if (isset($user['usertype']) && $user['usertype']=="user") echo "checked";?>
-                                        value="user">User
+                                        <div class="radio-option">
+                                            <input type="radio" name="usertype"
+                                            <?php if (isset($user['usertype']) && $user['usertype']=="admin") echo "checked";?>
+                                            value="admin">Admin
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" name="usertype"
+                                            <?php if (isset($user['usertype']) && $user['usertype']=="user") echo "checked";?>
+                                            value="user">User
+                                        </div>
                                 </div>
                             </div>
                             <?php

@@ -13,9 +13,16 @@ body {
 .gender-wrapper{
     color:var(--grey2);
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size:1.2rem;
     width:20rem;
+    padding-top: 3%;
+}
+
+.radio-option {
+    display: flex;
+    justify-content: flex-start;
+    width: 40%;
 }
 
 .image input {
