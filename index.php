@@ -47,8 +47,14 @@
     case 'editProduct':
       require_once 'views/editProduct.php';
       break;
+      case 'editUser':
+        require_once 'views/editUser.php';
+        break;
     case 'deleteProduct':
       require_once 'helpers/deleteProduct.php';
+      break;
+    case 'deleteUser':
+      require_once 'helpers/deleteUser.php';
       break;
     case 'products':
       require_once 'views/products.php';

@@ -90,14 +90,36 @@ class UserController extends DbConnect
     }
 
 
-    public function editUser($id)
+    public function getUserById($id)
     {
-        $query = $this->db->prepare('SELECT * from users WHERE id = :id');
-        $query->bindParam(':id', $id);
-        $query->execute();
+        $query = $this->db->query("SELECT * FROM users WHERE id=$id");
 
         return $query->fetch();
     }
+
+    public function editUser($id, $request)
+    {
+        $query = $this->db->prepare('UPDATE users SET name = :name,
+        surname = :surname, email = :email, gender = :gender, birthdate = :birthdate, usertype = :usertype WHERE id = :id');
+        $query->bindParam(':name', $request['name']);
+        $query->bindParam(':surname', $request['surname']);
+        $query->bindParam(':email', $request['email']);
+        $query->bindParam(':gender', $request['gender']);
+        $query->bindParam(':birthdate', $request['birthdate']);
+        $query->bindParam(':usertype', $request['usertype']);
+        $query->bindParam(':id', $id);
+        $query->execute();
+        return header('location:index.php');
+    }
+
+    // public function editUser($id)
+    // {
+    //     $query = $this->db->prepare('SELECT * from users WHERE id = :id');
+    //     $query->bindParam(':id', $id);
+    //     $query->execute();
+
+    //     return $query->fetch();
+    // }
 
     public function updateUser($request, $id)
     {
@@ -120,7 +142,7 @@ class UserController extends DbConnect
             $query->bindParam(':usertype', $usertype);
             $query->bindParam(':id', $id);
             $query->execute();
-            return header('Location: index.php');
+            return header('Location:index.php');
         } else {
             echo "<script>alert('$validationFailed')</script>";
             return;
@@ -129,7 +151,7 @@ class UserController extends DbConnect
 
     public function deleteUser($id)
     {
-        $query = $this->db->prepare('DELETE from products WHERE id=:id');
+        $query = $this->db->prepare('DELETE from users WHERE id=:id');
         $query->bindParam(':id', $id);
         $query->execute();
 

@@ -40,7 +40,7 @@
                         echo '
                             <tr class="user-row">
                                 <td class="user-field">
-                                    <p class="user-field">' . $value['name'] . $value['surname'] . '</p>
+                                    <p class="user-field">' . $value['name'] . ' ' . $value['surname'] . '</p>
                                 </td>
                                 <td class="user-field">
                                     <p class="user-field">' . $value['email'] . '</p>

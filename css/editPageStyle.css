@@ -10,6 +10,13 @@ body {
     text-align: center;
 }
 
+.gender-wrapper{
+    color:var(--grey2);
+    display:flex;
+    justify-content: space-between;
+    font-size:1.2rem;
+    width:20rem;
+}
 
 .image input {
     width: 80%;
