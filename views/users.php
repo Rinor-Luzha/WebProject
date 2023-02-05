@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="css/footerStyle.css" />
 <link rel="stylesheet" href="css/headersStyle.css" />
 <link rel="stylesheet" href="css/productStyle.css" />
+<link rel="stylesheet" href="css/usersAdminStyle.css" />
 
 </head>
 
@@ -24,7 +25,7 @@
             <table class="styled-table">
                 <thead>
                     <tr class="head-row">
-                        <th>Username</th>
+                        <th>Name</th>
                         <th>Email</th>
                         <th>Gender</th>
                         <th>Birthdate</th>
@@ -36,9 +37,30 @@
                 <tbody>
                     <?php
                     foreach ($users as $key => $value) {
-                        echo ''; // tabla me (name + lastname), email, gender, birthdate, usertype, edit and delete button
-                        // edit -> munesh me bo admin user and edit all his other fields
-
+                        echo '
+                            <tr class="user-row">
+                                <td class="user-field">
+                                    <p class="user-field">' . $value['name'] . $value['surname'] . '</p>
+                                </td>
+                                <td class="user-field">
+                                    <p class="user-field">' . $value['email'] . '</p>
+                                </td>
+                                <td class="user-field">
+                                    <p class="user-field">' . (($value['gender'] == 'M') ? ('Male') : ('Female') ). '</p>
+                                </td>
+                                <td class="user-field">
+                                    <p class="user-field">' . $value['birthdate'] . '</p>
+                                </td>
+                                <td class="user-field">
+                                    <p class="user-field">' . $value['usertype'] . '</p>
+                                </td>
+                                <td class="action-column">
+                                    <a class="edit-link" href="index.php?page=editUser&id=' . $value['id'] . '">Edit</a>
+                                </td>
+                                <td class="action-column">
+                                    <a class="delete-link" href="index.php?page=deleteUser&id=' . $value['id'] . '">Delete</a>
+                                </td>
+                            </tr>';
                     }
                     ?>
                 </tbody>
