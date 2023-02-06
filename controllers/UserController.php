@@ -109,6 +109,8 @@ class UserController extends DbConnect
         $query->bindParam(':usertype', $request['usertype']);
         $query->bindParam(':id', $id);
         $query->execute();
+        $_SESSION['usertype'] = $request['usertype'];
+        $_SESSION['username'] = $request['name'] . ' ' . $request['surname'];
         return header('location:index.php');
     }
 
