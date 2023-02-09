@@ -17,6 +17,7 @@
     $user = $userController->getUserById($_SESSION['userid']);
     
     if (isset($_POST['submit'])) {
+        $_POST['usertype'] = $user['usertype'];
         $userController->editUser($_SESSION['userid'], $_POST);
 
     }
