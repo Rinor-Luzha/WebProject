@@ -37,14 +37,14 @@
   margin-bottom: 1rem;
 }
 
-#contact-us {
+.footer-center h3 .contact-us {
   font-size: 1.8rem;
   color: white;
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
-#contact-us:hover {
+.footer-center h3 .contact-us:hover {
   color: var(--orange);
 }
 

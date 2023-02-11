@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2023 at 03:41 PM
+-- Generation Time: Feb 12, 2023 at 12:18 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -110,13 +110,13 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `description`, `price`, `imageuri`, `type`, `lastEditedBy`) VALUES
 (54, 'MSI Optix MEG381CQR Gaming Monitor 38\", IPS, 175Hz, Black', '999.99', 'images/monitor/monitor6.png', 'monitor', NULL),
-(55, 'MSI Optix MPG341CQR Gaming Monitor 27\" WQHD, IPS, 170Hz, Black', '950.99', 'images/monitor/monitor7.png', 'monitor', 'rinor luzha'),
+(55, 'MSI Optix MPG341CQR Gaming Monitor 27\" WQHD, IPS, 170Hz, Black', '950.99', 'images/monitor/monitor7.png', 'monitor', 'Rinor Luzha'),
 (56, 'MSI Optix G242 Gaming Monitor 23.8\" WQHD, IPS, 144Hz, Grey', '699.99', 'images/monitor/monitor8.png', 'monitor', NULL),
 (57, 'MSI Optix G242 Gaming Monitor 23.8\" WQHD, IPS, 144Hz, Grey', '699.99', 'images/monitor/monitor8.png', 'monitor', NULL),
 (58, 'MSI MAG VAMPIRIC 300 SeriesIntel Core i5, 16 GB RAM, 512 GB SSD, NVIDIA GeForce GTX 1650 Ti, grey', '1800.00', 'images/desktop/desktop2.png', 'desktop', NULL),
 (59, 'MSI GS76 STEALTH Core i7 11th Gen, 16 GB RAM, 512 GB SSD, NVIDIA® GeForce GTX™ 1650 Ti, Black', '2200.00', 'images/laptop/laptop2.png', 'laptop', NULL),
-(60, 'OMEN by HP 30L GT13-0038nc, Intel Core i7, 32GB RAM, 2TB SSD, NVIDIA GeForce RTX 3080, black', '2000.99', 'images/desktop/desktop6.png', 'desktop', 'rinor luzha'),
-(61, 'DELL ALIENWARE M15 R6 GAMING Core i9 12th Gen, 32 GB RAM, 1 TBSSD, NVIDIA® GeForce RTX™ 3050 Ti, Black', '1999.99', 'images/laptop/laptop1.png', 'laptop', 'rinor luzha'),
+(60, 'OMEN by HP 30L GT13-0038nc, Intel Core i7, 32GB RAM, 2TB SSD, NVIDIA GeForce RTX 3080, black', '2000.99', 'images/desktop/desktop6.png', 'desktop', 'Rinor Luzha'),
+(61, 'DELL ALIENWARE M15 R6 GAMING Core i9 12th Gen, 32 GB RAM, 1 TBSSD, NVIDIA® GeForce RTX™ 3050 Ti, Black', '1999.99', 'images/laptop/laptop1.png', 'laptop', 'Rinor Luzha'),
 (62, 'DELL ALIENWARE M15 R6 GAMING Core i7 11th Gen, 16 GB RAM, 512GB SSD, NVIDIA® GeForce RTX™ 3050 Ti, White', '2199.99', 'images/laptop/laptop7.png', 'laptop', NULL),
 (63, 'MSI Aegis TI3 VR7RD SLI-031EU, 32GB DDR4, 16GB GDDR5,NVIDIA® GeForce RTX™ 2080, black', '2200.00', 'images/desktop/desktop1.png', 'desktop', NULL),
 (64, 'MSI MAG VAMPIRIC 300 SeriesIntel Core i5, 32 GB RAM, 1 TB SSD, NVIDIA GeForce GTX 1650 Ti, balck', '2509.99', 'images/desktop/desktop3.png', 'desktop', NULL),
@@ -185,9 +185,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `surname`, `email`, `password`, `gender`, `birthdate`, `usertype`) VALUES
-(6, 'rinor', 'luzha', 'rinor@luzha.com', '494901d902629bee9cf130d700e4161f', 'M', '2003-12-28', 'admin'),
-(8, 'ardit', 'begaj', 'ardit@begaj.com', '494901d902629bee9cf130d700e4161f', 'M', '2002-02-13', 'user');
-
+(6, 'Rinor', 'Luzha', 'rinor@luzha.com', '494901d902629bee9cf130d700e4161f', 'M', '2003-12-28', 'admin'),
+(8, 'Ardit', 'Begaj', 'ardit@begaj.com', '494901d902629bee9cf130d700e4161f', 'M', '2002-02-13', 'user');
 
 --
 -- Indexes for dumped tables
@@ -226,7 +225,6 @@ ALTER TABLE `userproducts`
   ADD KEY `userId` (`userId`),
   ADD KEY `productId` (`productId`);
 
-
 --
 -- Indexes for table `users`
 --
@@ -261,12 +259,11 @@ ALTER TABLE `products`
 ALTER TABLE `userproducts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
-
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

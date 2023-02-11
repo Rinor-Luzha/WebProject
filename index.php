@@ -38,9 +38,6 @@
     case 'aboutUs':
       require_once 'views/aboutUs.php';
       break;
-    case 'contactUs':
-      require_once 'views/contactUs.php';
-      break;
     case 'account':
       require_once 'views/account.php';
       break;

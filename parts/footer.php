@@ -8,7 +8,7 @@
                 <a href="#">Terms & Conditions</a>
             </div>
             <div class="footer-center">
-                <h3>MY ACCOUNT</h3>
+                <h3>ACCOUNT</h3>
                 <?php
                 if (isset($_SESSION['username'])) {
                     echo '<a href="index.php?page=account">My Account</a>';
@@ -20,7 +20,7 @@
                 ?>
             </div>
             <div class="footer-center">
-                <h3><a id="contact-us" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=polar3commerce@gmail.com&su=SUBJECT&body=BODY">CONTACT US</a></h3>
+                <h3><a class="contact-us" target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=polar3commerce@gmail.com">CONTACT US</a></h3>
                 <div>
                     <span>
                         <i class="fas fa-map-marker-alt"></i>
@@ -31,7 +31,7 @@
                     <span>
                         <i class="far fa-envelope"></i>
                     </span>
-                    polar@hotmail.com
+                    polar3commerce@gmail.com
                 </div>
                 <div>
                     <span>

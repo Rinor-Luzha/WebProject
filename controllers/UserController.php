@@ -42,6 +42,10 @@ class UserController extends DbConnect
         if (empty($email)) {
             return "Email is required";
         }
+        $emailRegex = '/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/';
+        if (!preg_match($emailRegex, $email)) {
+            return "Email is given in an incorrect format.";
+        }
         $query = $this->db->query("SELECT * FROM users WHERE email='$email'");
         $userWithEmailExists = $query->fetch();
         if (isset($userWithEmailExists['email'])) {
@@ -62,7 +66,7 @@ class UserController extends DbConnect
         if (strlen($password) < 8) {
             return "Password should be at least 8 characters.";
         }
-        if (preg_match('/[#?!@$%^&*\-_\\\/]/', $password) && preg_match('/[A-Z]/', $password)) {
+        if (!preg_match('/[#?!@$%^&*\-_\\/]/', $password) || !preg_match('/[A-Z]/', $password)) {
             return "Password should contain at least one special character and uppercase letter.";
         }
     }

@@ -86,7 +86,7 @@ $userController = new UserController;
                         <small id="passwordError"></small>
                     </div>
                     <div class="login-button">
-                        <button type="submit" name="submit">Sign in</button>
+                        <button type="submit" name="submit">Sign up</button>
                     </div>
                     <div class="options">
                         <a class="options-text" href="index.php?page=login">Already have an account?</a>
@@ -95,7 +95,7 @@ $userController = new UserController;
             </div>
         </form>
     </main>
-    <!-- <script src="js/registrationValidation.js"></script> -->
+    <script src="js/registrationValidation.js"></script>
 </body>
 
 </html>

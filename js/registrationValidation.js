@@ -27,7 +27,6 @@ form.addEventListener('submit', (e) => {
     const passwordError = document.getElementById('passwordError');
     const emailError = document.getElementById('emailError');
     console.log(birthdate);
-
     let initialsValidated = true;
     let passwordValidated = true;
     let validation = true;
