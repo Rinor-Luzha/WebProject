@@ -18,12 +18,11 @@
         <div class="background-container">
             <div class="bg-1"></div>
             <div class="bg-2"></div>
-    
         </div>
         <div class="about-container">
             
             <div class="image-container">
-                <img src="./images/preview/desktop1.png" alt="">
+                <img src="./images/store-img.jpg" alt="">
                 
             </div>
 
