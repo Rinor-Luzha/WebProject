@@ -13,7 +13,6 @@ class UserController extends DbConnect
 
     public function readAllUsers()
     {
-        // TODO: Admin only
         $query = $this->db->query('SELECT * from users');
         return $query->fetchAll();
     }
@@ -117,15 +116,6 @@ class UserController extends DbConnect
         $_SESSION['username'] = $request['name'] . ' ' . $request['surname'];
         return header('location:index.php');
     }
-
-    // public function editUser($id)
-    // {
-    //     $query = $this->db->prepare('SELECT * from users WHERE id = :id');
-    //     $query->bindParam(':id', $id);
-    //     $query->execute();
-
-    //     return $query->fetch();
-    // }
 
     public function updateUser($request, $id)
     {
