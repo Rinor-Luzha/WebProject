@@ -20,7 +20,7 @@
                 ?>
             </div>
             <div class="footer-center">
-                <h3>CONTACT US</h3>
+                <h3><a id="contact-us" href="index.php?page=contactUs">CONTACT US</a></h3>
                 <div>
                     <span>
                         <i class="fas fa-map-marker-alt"></i>

@@ -39,20 +39,20 @@
                     foreach ($users as $key => $value) {
                         echo '
                             <tr class="user-row">
-                                <td class="user-field">
-                                    <p class="user-field">' . $value['name'] . ' ' . $value['surname'] . '</p>
+                                <td class="user-initials">
+                                    <p>' . $value['name'] . ' ' . $value['surname'] . '</p>
                                 </td>
-                                <td class="user-field">
-                                    <p class="user-field">' . $value['email'] . '</p>
+                                <td class="user-initials">
+                                    <p>' . $value['email'] . '</p>
                                 </td>
-                                <td class="user-field">
-                                    <p class="user-field">' . (($value['gender'] == 'M') ? ('Male') : ('Female') ). '</p>
+                                <td class="user-initials">
+                                    <p>' . (($value['gender'] == 'M') ? ('Male') : ('Female')) . '</p>
                                 </td>
-                                <td class="user-field">
-                                    <p class="user-field">' . $value['birthdate'] . '</p>
+                                <td class="user-initials">
+                                    <p>' . $value['birthdate'] . '</p>
                                 </td>
-                                <td class="user-field">
-                                    <p class="user-field">' . $value['usertype'] . '</p>
+                                <td class="user-initials">
+                                    <p>' . $value['usertype'] . '</p>
                                 </td>
                                 <td class="action-column">
                                     <a class="edit-link" href="index.php?page=editUser&id=' . $value['id'] . '">Edit</a>

@@ -157,6 +157,9 @@ class UserController extends DbConnect
         $query->bindParam(':id', $id);
         $query->execute();
 
+        if (isset($_SESSION['userid']) && $_SESSION['userid'] == $id) {
+            session_destroy();
+        }
         return header("location:index.php");
     }
 }
